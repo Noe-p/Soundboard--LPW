@@ -1,4 +1,6 @@
 {
+  "name": "Sounboard",
+  "displayName": "Example",
   "expo": {
     "name": "Sounboard",
     "slug": "Sounboard",
@@ -14,12 +16,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "usesIcloudStorage": true
     },
+    "plugins": ["expo-document-picker"],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
