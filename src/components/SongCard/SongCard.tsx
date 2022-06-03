@@ -1,5 +1,5 @@
 import { Sound } from 'expo-av/build/Audio';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { colors, font, position } from '../../../appStyle';
@@ -16,12 +16,30 @@ export const SongCard = (props: SongCardProps) => {
 
   const [sound, setSound] = useState<Sound>();
   const [isPause, setIsPause] = useState(true);
+  const [tags, setTags] = useState(song.tags);
+
+  useEffect(() => {
+    tags.forEach((tag, index) => {
+      if (text?.toLowerCase() == tag.toLowerCase()) {
+        const temp = tag;
+        tags[index] = tags[0];
+        tags[0] = temp;
+        setTags(tags);
+      }
+    });
+  }, [text]);
 
   async function onPressPlay() {
-    const sound = await uploadSound(song.uri);
-    if (sound) {
-      setSound(sound);
-      playSound(sound, song.initValue, song.volume, song.endValue, setIsPause);
+    const newSound = await uploadSound(song.uri);
+    if (newSound) {
+      setSound(newSound);
+      playSound(
+        newSound,
+        song.initValue,
+        song.volume,
+        song.endValue,
+        setIsPause
+      );
       setIsPause(false);
     }
   }
@@ -54,7 +72,7 @@ export const SongCard = (props: SongCardProps) => {
       <View style={style.containerTextSongCard}>
         <Text style={[font.text, font.bold, font.white]}>{song.title}</Text>
         <View style={[position.row]}>
-          {song?.tags
+          {tags
             ?.map((tag) => (
               <Text
                 key={tag}

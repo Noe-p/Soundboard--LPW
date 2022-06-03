@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { FlatList, Pressable } from 'react-native';
+import { FlatList, Pressable, StyleSheet, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useSelector } from 'react-redux';
-import { colors } from '../../appStyle';
-import { PageModal, SongCard } from '../components';
+import { colors, position } from '../../appStyle';
+import { Input, PageModal, SongCard } from '../components';
 import { soundSelector } from '../redux/userSoundsSlice';
 import { SoundType } from '../types';
 import { ActionsOnUserSound } from './ActionsOnUserSound';
@@ -32,6 +32,7 @@ export function UserSounds(props: UserSoundsProps) {
   const [recordVisible, setRecordVisible] = useState(false);
   const [choiceVisible, setChoiceVisible] = useState(false);
   const [editModalVisible, setEditModalVisible] = useState(false);
+  const [text, setText] = useState('');
 
   //Redux
   const userSoundList: SoundType[] = useSelector(soundSelector).sound;
@@ -46,6 +47,20 @@ export function UserSounds(props: UserSoundsProps) {
     setChoiceVisible(true);
   }
 
+  function filterSound(list: SoundType[]) {
+    if (text) {
+      const indexes: number[] = [];
+      list.forEach((ele, i) => {
+        ele.tags.forEach((tag) => {
+          if (tag.toLowerCase() == text.toLowerCase()) indexes.push(i);
+        });
+      });
+      return indexes.map((i) => list[i]);
+    } else {
+      return list;
+    }
+  }
+
   return (
     <PageModal
       modalVisible={modalVisible}
@@ -54,10 +69,18 @@ export function UserSounds(props: UserSoundsProps) {
       animation
       open={setImportModalVisible}
     >
+      <View style={[position.row, style.searchInput]}>
+        <Input
+          value={text}
+          onChangeText={setText}
+          style={{ flex: 1, marginRight: 10 }}
+          placeholder={'Artistes, titres ou podcasts'}
+        />
+      </View>
       <FlatList
-        data={userSoundList}
+        data={filterSound(userSoundList)}
         renderItem={({ item }) => (
-          <SongCard song={item}>
+          <SongCard song={item} text={text}>
             <Pressable onPress={() => openActionsOnUserSound(item)}>
               <Ionicons
                 name={'ellipsis-horizontal'}
@@ -106,3 +129,11 @@ export function UserSounds(props: UserSoundsProps) {
     </PageModal>
   );
 }
+
+const style = StyleSheet.create({
+  searchInput: {
+    marginTop: 10,
+    marginBottom: 10,
+    marginHorizontal: 10,
+  },
+});
