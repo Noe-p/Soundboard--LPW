@@ -34,7 +34,7 @@ export function MultipleBottomButton(
         <Icon
           type='material'
           name={firstEle?.icon}
-          color={colors.purple}
+          color={colors.softBlue}
           tvParallaxProperties
         />
         <Text style={[style.buttonText, font.h3]}>{firstEle?.label}</Text>
@@ -48,7 +48,7 @@ export function MultipleBottomButton(
           <Icon
             type='material-community'
             name={button.icon}
-            color={colors.purple}
+            color={colors.softBlue}
             tvParallaxProperties
           />
           <Text style={[style.buttonText, font.h3]}>{button.label}</Text>
@@ -58,7 +58,9 @@ export function MultipleBottomButton(
         onPress={() => closeModal(false)}
         style={[style.button, style.submit]}
       >
-        <Text style={[style.buttonText, font.h3, font.blue]}>Annuler</Text>
+        <Text style={[style.buttonText, font.h3, { color: colors.yellow }]}>
+          Annuler
+        </Text>
       </Pressable>
     </View>
   );
@@ -79,7 +81,7 @@ const style = StyleSheet.create({
   buttonText: {
     flex: 1,
     textAlign: 'center',
-    color: colors.purple,
+    color: colors.softBlue,
   },
   topButton: {
     borderTopLeftRadius: general.bigBorderRadius,

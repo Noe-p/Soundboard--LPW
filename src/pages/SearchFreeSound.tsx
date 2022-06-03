@@ -80,7 +80,7 @@ export function SearchFreeSound(props: SearchFreeSoundProps) {
         <Pressable onPress={fetchData}>
           <Ionicons
             name={'search-outline'}
-            style={{ color: colors.purple }}
+            style={{ color: colors.softBlue }}
             size={40}
           />
         </Pressable>
@@ -102,7 +102,7 @@ export function SearchFreeSound(props: SearchFreeSoundProps) {
                     ? 'trash-outline'
                     : 'add-circle-outline'
                 }
-                style={{ color: colors.purple }}
+                style={{ color: colors.softBlue }}
                 size={30}
               />
             </Pressable>

@@ -15,6 +15,7 @@ interface RecordProps {
   modalVisible: boolean;
   setModalVisible: (visible: boolean) => void;
 }
+
 //Cette Vue correspond à l'enregistrement d'un son
 //Quand un son est enregistré, on ouvre la modale pour l'éditer et ensuite l'ajouter
 export function Record(props: RecordProps) {
@@ -41,7 +42,7 @@ export function Record(props: RecordProps) {
                   id: '_' + Math.random().toString(36),
                   title: 'Enregistrement',
                   duration: data.durationMillis,
-                  tags: [],
+                  tags: ['Enregistrement'],
                   uri: getUri,
                   initValue: 0,
                   endValue: data.durationMillis,
@@ -49,7 +50,6 @@ export function Record(props: RecordProps) {
                 };
                 setUserSound(userSound);
                 setEditModalVisible(true); //On ouvre la modale d'éditage
-                setModalVisible(false); //On ferme la modale d'enregistrement
               }
             }
           });
@@ -85,6 +85,7 @@ export function Record(props: RecordProps) {
           setModalVisible={setEditModalVisible}
           userSound={userSound}
           setUserSound={setUserSound}
+          closeLastModal={setModalVisible}
         />
       ) : (
         <></>

@@ -25,7 +25,7 @@ const transformSong = (song: any): SoundType => {
     id: song.id,
     title: song.name,
     duration: song.duration * 1000,
-    tags: song.tags,
+    tags: [...song.tags, 'FreeSound'],
     uri: song.previews['preview-hq-mp3'],
     initValue: 0,
     endValue: song.duration * 1000,

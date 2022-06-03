@@ -10,3 +10,4 @@ Le but de ce projet est d’implémenter une version virtuelle simplifiée d’u
  - [Antoine Caillon](antoine.caillon@ircam.fr)
  - [Philippe Esling](philippe.esling@ircam.fr)
 
+## Visuels : 

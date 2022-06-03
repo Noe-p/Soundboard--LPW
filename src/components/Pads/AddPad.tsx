@@ -17,8 +17,8 @@ export function AddPad(props: AddPadProps) {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: colors.purpleLight,
-    borderColor: colors.purple,
+    backgroundColor: colors.softBlueLight,
+    borderColor: colors.softBlue,
     borderWidth: 1,
     borderRadius: general.borderRadius,
     margin: 10,

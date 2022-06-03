@@ -18,8 +18,8 @@ export function Pad(props: PadProps) {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: colors.lightGreen,
-    borderColor: colors.green,
+    backgroundColor: colors.yellowLight,
+    borderColor: colors.yellow,
     borderWidth: 1,
     borderRadius: general.borderRadius,
     margin: 10,

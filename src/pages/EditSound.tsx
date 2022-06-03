@@ -108,7 +108,7 @@ export function EditSound(props: EditSoundProps) {
               maximumValue={1}
               onValueChange={setVolume}
               value={volume}
-              thumbTintColor={colors.purple}
+              thumbTintColor={colors.softBlue}
               trackStyle={{
                 borderColor: 'red',
               }}
@@ -188,9 +188,9 @@ const style = StyleSheet.create({
   label: { color: colors.white, marginBottom: 5 },
   inputContainer: { paddingVertical: 20 },
   submitButton: {
-    backgroundColor: colors.purpleLight,
+    backgroundColor: colors.softBlueLight,
     borderWidth: 1,
-    borderColor: colors.purple,
+    borderColor: colors.softBlue,
     paddingHorizontal: 50,
     paddingVertical: 20,
     borderRadius: 50,

@@ -40,7 +40,7 @@ export function ChooseImport(props: ChooseImportProps): JSX.Element {
       id: '_' + Math.random().toString(36),
       title: file.name,
       duration: duration,
-      tags: [],
+      tags: ['Local'],
       uri: file.uri,
       endValue: duration,
       initValue: 0,
@@ -113,7 +113,7 @@ const style = StyleSheet.create({
   buttonText: {
     flex: 1,
     textAlign: 'center',
-    color: colors.purple,
+    color: colors.softBlue,
   },
   topButton: {
     borderTopLeftRadius: general.bigBorderRadius,

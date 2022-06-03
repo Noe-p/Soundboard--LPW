@@ -15,12 +15,12 @@ export function Topbar(props: TopbarProps): JSX.Element {
   return (
     <View style={[style.container, position.rowSpace]}>
       <Pressable onPress={() => close(false)}>
-        <Text style={[font.h3, font.blue]}>Annuler</Text>
+        <Text style={[font.h3, { color: colors.yellow }]}>Annuler</Text>
       </Pressable>
       <Text style={[font.h3, font.white, font.bold]}>{title}</Text>
       {open ? (
         <Pressable onPress={() => open(true)}>
-          <Ionicons name='add-outline' size={30} color={colors.purple} />
+          <Ionicons name='add-outline' size={30} color={colors.softBlue} />
         </Pressable>
       ) : (
         <></>

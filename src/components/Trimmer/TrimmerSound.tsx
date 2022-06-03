@@ -90,10 +90,10 @@ export function TrimmerSound(props: TrimmerSoundProps): JSX.Element {
         trimmerRightHandlePosition={trimmerRight}
         minimumTrimDuration={minimumTrimDuration}
         maxTrimDuration={maxTrimDuration}
-        tintColor={colors.green}
+        tintColor={colors.yellow}
         markerColor={colors.grey}
-        trackBackgroundColor={colors.purpleLight}
-        trackBorderColor={colors.purple}
+        trackBackgroundColor={colors.softBlueLight}
+        trackBorderColor={colors.softBlue}
         scrubberColor={colors.white}
         scrubberPosition={scrubberPosition}
         onScrubbingComplete={onScrubbingComplete}
@@ -128,9 +128,9 @@ export function TrimmerSound(props: TrimmerSoundProps): JSX.Element {
 
 const style = StyleSheet.create({
   playPauseButton: {
-    backgroundColor: colors.lightGreen,
+    backgroundColor: colors.yellowLight,
     borderWidth: 1,
-    borderColor: colors.green,
+    borderColor: colors.yellow,
     paddingHorizontal: 30,
     paddingVertical: 15,
     borderRadius: 50,

@@ -3,17 +3,17 @@ import { StyleSheet } from 'react-native';
 export const colors = {
   dark: 'rgb(38, 43, 49)',
   lightDark: 'rgb(55,62,71)',
-  green: 'rgb(110,235,131)',
-  lightGreen: 'rgba(110,235,131,0.2)',
-  red: 'rgb(250,0,0)',
+  yellow: 'rgb(253, 202, 64)',
+  yellowLight: 'rgba(253, 202, 64,0.2)',
+  red: 'rgb(176, 65, 62)',
   lightRed: 'rgba(250,0,0, 0.2)',
   orange: '#FF8552',
   rose: '#CB9CF2',
   white: 'white',
   blue: 'rgb(0,122,255)',
   grey: 'grey',
-  purple: '#8547F8',
-  purpleLight: 'rgba(133, 71, 248, 0.2)',
+  softBlue: 'rgb(97, 160, 175)',
+  softBlueLight: 'rgba(97, 160, 175, 0.2)',
 };
 
 export const general = {

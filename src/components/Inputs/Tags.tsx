@@ -42,7 +42,7 @@ export function Tags(props: TagsProps): JSX.Element {
         >
           <Ionicons
             name={'add-circle-outline'}
-            style={{ color: colors.purple }}
+            style={{ color: colors.softBlue }}
             size={40}
           />
         </Pressable>
@@ -84,9 +84,9 @@ const style = StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: 10,
     borderRadius: 20,
-    borderColor: colors.green,
+    borderColor: colors.yellow,
     color: colors.white,
-    backgroundColor: colors.lightGreen,
+    backgroundColor: colors.yellowLight,
     overflow: 'hidden',
     textAlign: 'center',
     minWidth: 70,

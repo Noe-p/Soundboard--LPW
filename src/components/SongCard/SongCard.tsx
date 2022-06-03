@@ -58,14 +58,14 @@ export const SongCard = (props: SongCardProps) => {
           onPress={onPressPlay}
           name={'play'}
           size={30}
-          style={{ color: colors.purple }}
+          style={{ color: colors.softBlue }}
         />
       ) : (
         <Ionicons
           onPress={onPressPause}
           name={'pause'}
           size={30}
-          style={{ color: colors.purple }}
+          style={{ color: colors.softBlue }}
         />
       )}
 
@@ -112,9 +112,9 @@ const style = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 20,
-    borderColor: colors.green,
+    borderColor: colors.yellow,
     color: colors.white,
-    backgroundColor: colors.lightGreen,
+    backgroundColor: colors.yellowLight,
     overflow: 'hidden',
     textAlign: 'center',
     minWidth: 70,

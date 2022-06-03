@@ -84,7 +84,7 @@ export function UserSounds(props: UserSoundsProps) {
             <Pressable onPress={() => openActionsOnUserSound(item)}>
               <Ionicons
                 name={'ellipsis-horizontal'}
-                style={{ color: colors.purple }}
+                style={{ color: colors.softBlue }}
                 size={30}
               />
             </Pressable>
