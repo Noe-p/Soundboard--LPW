@@ -2,8 +2,6 @@ import { SoundType } from '../types';
 
 const baseUrl = 'https://freesound.org/apiv2/';
 const apiKey = '3lgFjuAqUf8NshX7UPLrFwTxEztJhILz5t46cv5U';
-const clientID = 'C5oAW9bA8lo5yogXayem';
-const authorizationCode = 'alwSmpmk17kI9YgdSzdUMAkyPVxEI9';
 const uri = {
   name: 'search/text',
   id: 'sounds/',

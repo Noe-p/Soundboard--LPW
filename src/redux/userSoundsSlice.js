@@ -15,18 +15,10 @@ const userSoundSlice = createSlice({
         ele.id === action.payload.id ? action.payload : ele
       );
     },
-    updateTitle: (state, action) => {
-      return state.map((ele) =>
-        ele.id === action.payload.id
-          ? { ...ele, title: action.payload.title }
-          : ele
-      );
-    },
   },
 });
 
-export const { addSound, removeSound, updateSound, updateTitle } =
-  userSoundSlice.actions;
+export const { addSound, removeSound, updateSound } = userSoundSlice.actions;
 export const soundSelector = (state) => state;
 
 export default userSoundSlice.reducer;
