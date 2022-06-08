@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { MultipleBottomButton } from '../components/Buttons';
+import { MultipleBottomButton } from '../components';
 import {
   addSound_SoundBoard,
   removeSound_SoundBoard,
