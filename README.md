@@ -1,7 +1,5 @@
 # Soundboard--LPW
 
-## Informations 
-
 **Version Web :** [SoundBoard](https://soundboard-flame.vercel.app/)  
 **Rapport de Projet :** [Notion](https://noe-p.notion.site/Rapport-Projet-SoundBoard-bd17500151674ae89e58cad0e6b53068)
 
